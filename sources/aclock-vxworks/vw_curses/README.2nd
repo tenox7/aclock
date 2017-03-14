@@ -1,0 +1,15 @@
+I have modified the original source so that it compiles & works under
+VxWorks 5.2. The biggest changes were:
+
+1> Use mutual-exclusion semaphore.
+2> Fix prototypes.
+3> Change scanw, wscanw functions to use stdarg.h & sscanf.
+4> Fixed curses.h to use WRS's OK definition.
+
+The only problem introduced is that #3 means I had to limit the number
+of args to 10.
+
+Richard Neitzel thor@atd.ucar.edu               Torren med sitt skjegg
+National Center For Atmospheric Research        lokkar borni under sole-vegg
+Box 3000 Boulder, CO 80307-3000	                Gjø'i med sitt shinn
+303-497-2057                                    jagar borni inn.

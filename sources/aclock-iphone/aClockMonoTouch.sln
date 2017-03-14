@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aClockMonoTouch", "aClockMonoTouch\aClockMonoTouch.csproj", "{90840AE8-1EB3-4070-AA86-740F57256856}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90840AE8-1EB3-4070-AA86-740F57256856}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{90840AE8-1EB3-4070-AA86-740F57256856}.Debug|iPhone.Build.0 = Debug|iPhone
+		{90840AE8-1EB3-4070-AA86-740F57256856}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{90840AE8-1EB3-4070-AA86-740F57256856}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{90840AE8-1EB3-4070-AA86-740F57256856}.Release|iPhone.ActiveCfg = Release|iPhone
+		{90840AE8-1EB3-4070-AA86-740F57256856}.Release|iPhone.Build.0 = Release|iPhone
+		{90840AE8-1EB3-4070-AA86-740F57256856}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{90840AE8-1EB3-4070-AA86-740F57256856}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = aClockMonoTouch\aClockMonoTouch.csproj
+		version = 1.1
+	EndGlobalSection
+EndGlobal

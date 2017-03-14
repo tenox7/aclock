@@ -1,0 +1,41 @@
+Contributions to the binary collection. In order of appearance:
+
+- SGI MIPS:IRIX6, Sun Sparc/Linux, Cray SV1/Unicos - Rafal Maszkowski
+- i386:SCO Unix - Jeff Liebermann
+- BeBox PPC:BeOS - Alexander G. M. Smith
+- i386:SINIX, MIPS:SINIX, BS2000/OSD - Martin Kraemer
+- i386:DYNIX/ptx - Doug Monroe
+- DEC VAX/VMS - Hans Vlems
+- CLIPPER/CLIX - Carl R. Friend
+- Sun3-m68k:SunOS4, Sparc:Sunos4 - Peter Koch
+- IBM S390:zOS - Anthony Giorgio
+- Apollo:DomainOS - Jim Rees
+- Luna-88k:UniOS,OpenBSD - Kenji Aoyama 
+- AViiON-m88k:DG/UX, PPC:WindowsNT, AT&T-Hobbit:BeOS, PPC:BeOS-PEF, AT&T m68k:UnixPC, ARM:RISC iX - Raymond Stricklin aka Bear
+- IA64:OpenVMS - Thierry USO
+- Cray YMP-EL92:Unicos - Dave McGuire
+- AT&T 3B2 - Stephen Jones
+- Altos:Xenix - Ken Guenther
+- SGI MIPS:IRIX4+5, Apple A/UX2, SH:NerBSD, AXP:NetBSD5, ARMEL:NetBSD5, i386:Interix - Oliver Reissig
+- Amiga:Workbench, PPC:MorphOS, ARM:iOS-APP, EFI Firmare, ARM:Linux, ARM:FreeBSD, PPC:Linux, PPC:FreeBSD - Natalia Portillo aka claunia
+- Sony NEWS:NEWS-OS - Dennis Grevenstein
+- MIPS-Magnum:NetBSD, Amiga Boot Disk, Sharp X68000:Human68k OS Cisco:IOS - Jason Stevens aka neozeed
+- Amiga M68K:Unix - Andrew Whitlock aka faillure
+- i286:OS/2 1.x, PPC:OS/2, PPC:Solaris, EM64T:Solaris, i386:Win16, Windows 1.x-2.x Ports, i386:UnixWare1, i286:Microsoft XENIX - Michal Necasek
+- Tektronix 4014 - Bob Rosenbloom
+- Nokia N900 ARM:Linux - Marcin Proboszcz
+- MIPS Magnum:Risc/OS - Julien Noel
+- Tandy 6000:Xenix - Kevin Adams
+- i386:Dell SVR4 UNIX - Charles Sauer
+- Motorola MVME-m88k:SystemV, MVME-m68k:SystemV, MVME-m68k:OpenBSD, MVME-m68k:LynxOS, MVME-ppc:Linux, SPARC:BSD/OS - Plamen Mihaylov
+- AViiON-Pentium:DG/UX, Android:Nexus4 - Adam Gutman
+- Atari M68K:SystemV - Alexander Bochmann
+- i286:QNX 2, QNX2 Demo Floppy - Mitchell Schoenbrun
+- AppleII 6502:GEOS, Commodore C64/128 6510:GEOS, Mac PPC:MachTen, ARM:WindowsRT - Peter Godwin
+- DECstation 5000 MIPS:OSF/1, PDP-11:DEMOS, i386:BSDI 1.1, i386:ReactOS - Dima Naumov aka mrRadio aka clangbsd
+- i8086:ELKS - Lorenzo Gatti
+- Transputer Inmos T4:HeliIOS, Inmos T8:HeliIOS - Michael Bruestle
+- Venix/86 - Jim Carpenter
+- 386:Wyse UNIX - Mihai Gaitos
+
+Thanks a lot!

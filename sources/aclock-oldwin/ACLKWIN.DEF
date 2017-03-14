@@ -1,0 +1,8 @@
+NAME aclock
+
+HEAPSIZE    4096
+STACKSIZE   8192
+
+EXPORTS
+    WNDPROC
+

@@ -1,0 +1,16 @@
+Aclock mini-port to Wind River VxWorks 6.2.
+Uses vw_curses from stevie UNIX app sample.
+
+This archive should be extracted under:
+/WindRiver/vxworks-6.2/target/usr/apps/
+
+To build for VxSim emulator:
+make CPU=SIMPENTIUM TOOL=diab
+or any other CPU/compiler spec
+You can seen available specs in /WindRiver/vxworks-6.2/target/usr/root/
+
+
+To run:
+rtpSp "host:/WindRiver/vxworks-6.2/target/lib/usr/root/SIMPENTIUMgnu/bin/aclock-SIMPENTIUM-vxworks.vxe"
+
+

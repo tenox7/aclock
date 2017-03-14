@@ -1,0 +1,53 @@
+Just compile
+    Minix3 ARM
+    OpenSolaris new CPUs
+    HaikuOS ARM
+    Microport 286
+    Coherent 286
+    Xenix 286
+    Apple IIGS GNO https://en.wikipedia.org/wiki/GNO/ME
+    Xv6 x86 ARM
+    HPUX <= 8
+    Microsoft Nano Server
+    WinPE boot image
+    OpenRISC - Linux
+    RISC-V - Linux, FreeBSD, NetBSD
+    RiscOS ARM 26 bit
+
+Code Port Required
+    O3ONE
+    HelenOS 386 ARM MIPS SPARC etc
+    OS-9
+    Micronix
+    TROPIX
+    Consoles, Xbox, PS2/3/4, etc.
+
+
+No system available
+    AIX IA64 aka Project Monterey
+    NCR Tower Unix
+    PowerMAX UNIX
+    Idris
+    Windows NT SPARC, CLIX
+    Amdahl UTS
+    MINWIN
+    CX/UX Harris SysV running on NightHawk series m88k based machines
+    SPARC VxWorks
+    Consensys UNIX
+
+On hold wating for Aclock 3.x
+    CP/M != ZX Spectrum 3
+    UZIX
+    UZI
+    z88dk
+    ccz80
+    Aztec C
+    MAME/MESS
+    Research Unix on SIMH
+
+Misc
+    More embedded/RTOS
+    Emscripten
+    More x64 OSes
+    More arm64 aka aarch64
+    Linux on Intel i960

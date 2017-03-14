@@ -1,0 +1,12 @@
+TARGETNAME=aclock
+TARGETTYPE=DRIVER
+TARGETPATH=C:\aclock-nthal
+
+INCLUDES=C:\DDK\inc
+LIBS=C:\DDK\lib
+
+MSC_WARNING_LEVEL=/W0 /WX
+
+
+SOURCES=aclock.c aclock.rc
+

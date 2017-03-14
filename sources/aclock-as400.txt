@@ -1,0 +1,153 @@
+Building aclock for as/400:
+------------------------------------------------------------
+create 3 src files:
+CRTSRCPF QCMDSRC
+CRTSRCPF QPNLSRC
+CRTSRCPF QCSRC
+
+using ftp for each Q*SRC.FILE in /QSYS.LIB/TENOX1.LIB/
+upload aclock.mbr (member) file
+or edit
+
+compile:
+CRTBNDC PGM(ACLOCK)
+
+create program:
+CRTCMD CMD(ACLOCK) PGM(ACLOCK) HLPPNLGRP(ACLOCK) HLPID(ACLOCK)
+
+export to savf:
+CRTSAVF FILE(TENOX1/ACLOCKF) TEXT('ACLOCK AS/400') 
+SAVOBJ OBJ(ACLOCK) LIB(TENOX1) DEV(*SAVF) SAVF(ACLOCKF)
+
+to run just type aclock, to end sysreq + 2
+in tn5250 ctrl^c + 2
+
+QCMDSRC.FILE/aclock.mbr
+------------------------------------------------------------
+CMD        PROMPT('ACLOCK')
+------------------------------------------------------------
+
+QPNLSRC.FILE/aclock.mbr
+------------------------------------------------------------
+:PNLGRP.
+:HELP NAME=aclock.
+:P.
+ACLOCK AS/400
+:EHELP.
+:EPNLGRP.
+------------------------------------------------------------
+
+QCSRC.FILE/aclock.mbr
+------------------------------------------------------------
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <qsnapi.h>
+#include <time.h>
+
+#define M_PI 3.14
+
+draw_circle(int hm, int sy, int sx, int fhw) {
+    char c[1];
+    int x,y,r;
+
+    x=10;
+    y=10;
+    c[0]='x';
+
+    for(r=0;r<60;r++) {
+        x=cos(r*M_PI/180*6)*hm*fhw+sx; 
+        y=sin(r*M_PI/180*6)*hm+sy; 
+        switch (r) {
+            case 0:
+            case 5:
+            case 10:
+            case 15:
+            case 20:
+            case 25:
+            case 30:
+            case 35:
+            case 40:
+            case 45:
+            case 50:
+            case 55:
+                c[0]='o';
+                break;
+            default:
+                c[0]='.';
+                break; 
+        }
+
+        QsnWrtDta(c, 1, 0, y, x, QSN_SA_NORM, QSN_SA_NORM,
+                      QSN_SA_NORM, QSN_SA_NORM, 0, 0, NULL); 
+    }
+}
+
+draw_hand(int m, int hl, char c, int sx, int sy, int fhw){
+	int x,y,n;
+	float r=(m-15)*(M_PI/180)*6;
+    char s[1];
+
+    s[0]=c;
+
+	for(n=1; n<hl; n++){
+		x=cos(r)*n*fhw+sx;
+		y=sin(r)*n+sy;
+        QsnWrtDta(s, 1, 0, y, x, QSN_SA_NORM, QSN_SA_NORM,
+                    QSN_SA_NORM, QSN_SA_NORM, 0, 0, NULL); 
+
+	}
+}
+
+
+int main(void) {
+    char str[32];
+    int FontHW = 2;
+    int sXmax, sYmax, smax, hand_max, sXcen, sYcen;
+    struct tm *ltime;
+    time_t t;
+
+    //todo: get res using QsnRtvScrDim or QsnRtvMod 
+    sXmax = 80;
+    sYmax = 24;
+
+    if(sXmax/2<=sYmax)
+        smax=sXmax/2;
+    else
+        smax=sYmax;
+
+    hand_max = (smax/2)-1;
+
+    sXcen = sXmax/2;
+    sYcen = sYmax/2;
+
+
+    while(1) {
+        t=time(&t);
+        ltime=localtime(&t);
+
+        QsnClrScr('0', 0, 0, NULL);
+        draw_circle(hand_max, sYcen, sXcen, FontHW);
+		draw_hand((ltime->tm_hour*5)+(ltime->tm_min/10),
+            2*hand_max/3, 'h', sXcen, sYcen, FontHW);
+		draw_hand(ltime->tm_min, hand_max-2, 'm', sXcen,
+            sYcen, FontHW);
+		draw_hand(ltime->tm_sec, hand_max-1, '.', sXcen,
+            sYcen, FontHW);
+
+        sprintf(str, ".:ACLOCK:.");
+        QsnWrtDta(str, strlen(str), 0, sYmax/4, sXcen-5, 
+        QSN_SA_NORM, QSN_SA_NORM, QSN_SA_NORM, QSN_SA_NORM, 
+        0, 0, NULL); 
+
+        sprintf(str, "%02d:%02d:%02d", ltime->tm_hour, 
+        ltime->tm_min, ltime->tm_sec);
+        QsnWrtDta(str, strlen(str), 0, 4*sYmax/5, sXcen-5,
+        QSN_SA_NORM, QSN_SA_NORM, QSN_SA_NORM, QSN_SA_NORM, 
+        0, 0, NULL); 
+
+        sleep(1);
+    }
+}
+------------------------------------------------------------

@@ -1,0 +1,55 @@
+[Started with Berkeley 4.3 Tahoe curses 5.5 distribution]
+
+90/02/07    Georg Feil
+  -Bug fixed in scrolling of windows:        
+   Excess call to macro SYNCH_IN() removed at line 91 of addbytes.c.
+   Caused y to get set to -1 after scroll!
+
+90/02/08    Georg Feil
+  -Behaviour of wrefresh() changed to not abort awkwardly on error from
+   makech(), i.e. always cleans up (repositions cursor and flushes).
+  -Added initialization and checking of _FLUSH flag in _flags word
+   (set by flushok()).
+     
+90/02/08    Georg Feil
+  -Fixed mvwprintw() bug in mvprintw.c (move acted on wrong screen).
+
+90/06/13    Georg Feil
+  -Ported to VxWorks
+
+90/06/27    Georg Feil
+  -Fixed bug in scrolling (deleteln.c).
+
+90/08/27    Georg Feil
+  -Added semaphores to lock all major routines (new file semaphore.c).
+
+90/10/02    Georg Feil
+  -Fixed bug in touchoverlap(), overlay(), and overwrite()
+   overlap range check. 'x' was used in place of 'y'!
+  -Added (apparently) missing braces in if statement in wrefresh().
+   uses 'automatic' clrtoeol()'s.
+
+90/10/03    Georg Feil
+  -Fixed bugs in overwrite().
+  -Fixed bug in newwin(), someone forgot to initialize win->_orig to NULL!
+
+90/10/04    Georg Feil
+  -Improved min() and max() routines in toucholap.c etc. (parens around args).
+
+90/12/20    Georg Feil
+  -Added checks for null window parameter to addbytes.c, others.
+
+91/02/13    Georg Feil
+  -Added renewwin() function to create a new window at an existing window's
+     address. Also wrote associated redelwin() and remakewin(), not for user
+     access.
+
+91/04/25    Georg Feil
+  -Changed declaration of Def_term in curses.c to reserve more space
+   (80 chars). Used to have room for only 7!
+
+91/07/24    Georg Feil
+  -Cleaned up for VxWorks archives submission.
+
+91/08/01    Georg Feil
+  -TAR'd and submitted as vw_curses, with termlib and twinkle test program.

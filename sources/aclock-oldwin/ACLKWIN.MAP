@@ -1,0 +1,896 @@
+
+ ACLOCK
+
+ Start     Length     Name                   Class
+ 0001:0000 04691H     _TEXT                  CODE
+ 0002:0000 00010H     NULL                   BEGDATA
+ 0002:0010 006F6H     _DATA                  DATA
+ 0002:0706 0000EH     CDATA                  DATA
+ 0002:0714 00000H     XIB                    DATA
+ 0002:0714 00004H     XI                     DATA
+ 0002:0718 00000H     XIE                    DATA
+ 0002:0718 00000H     XPB                    DATA
+ 0002:0718 00002H     XP                     DATA
+ 0002:071A 00000H     XPE                    DATA
+ 0002:071A 00000H     XCB                    DATA
+ 0002:071A 00000H     XC                     DATA
+ 0002:071A 00000H     XCE                    DATA
+ 0002:071A 00000H     XIFB                   DATA
+ 0002:071A 00000H     XIF                    DATA
+ 0002:071A 00000H     XIFE                   DATA
+ 0002:071A 00000H     XCFB                   DATA
+ 0002:071A 00000H     XCF                    DATA
+ 0002:071A 00000H     XCFE                   DATA
+ 0002:071A 0002CH     CONST                  CONST
+ 0002:0746 00000H     HDR                    MSG
+ 0002:0746 0012AH     MSG                    MSG
+ 0002:0870 00027H     PAD                    MSG
+ 0002:0897 00000H     EPAD                   MSG
+ 0002:08A0 00042H     _BSS                   BSS
+ 0002:08E2 00000H     XOB                    BSS
+ 0002:08E2 00000H     XO                     BSS
+ 0002:08E2 00000H     XOE                    BSS
+ 0002:08F0 00600H     c_common               BSS
+
+ Origin   Group
+ 0002:0   DGROUP
+
+ Address   Export                  Alias
+
+ 0001:04BF WNDPROC                 WNDPROC
+
+  Address         Publics by Name
+
+ 0001:22CD       $i4_8
+ 0002:030F       $i4_ac_hi
+ 0002:0313       $i4_ac_lo
+ 0001:2721       $i4_add
+ 0001:2672       $i4_cmp
+ 0001:2909       $i4_div
+ 0001:2907       $i4_divrev
+ 0001:2188       $i4_errdiv0
+ 0001:217E       $i4_errinf
+ 0001:2192       $i4_errinvld
+ 0001:217E       $i4_errminf
+ 0001:217E       $i4_errpinf
+ 0001:2545       $i4_fix
+ 0001:2511       $i4_fixirnd
+ 0001:2511       $i4_fixrnd
+ 0001:2365       $i4_l
+ 0001:2883       $i4_mul
+ 0001:27F3       $i4_norm
+ 0001:2351       $i4_q
+ 0002:0302       $i4_result
+ 0001:2821       $i4_round
+ 0002:030D       $i4_round_exp
+ 0002:030C       $i4_round_flag
+ 0001:2359       $i4_s
+ 0001:2719       $i4_sub
+ 0001:2717       $i4_subrev
+ 0001:23F1       $i4_to_l
+ 0001:23E7       $i4_to_lirnd
+ 0001:23E7       $i4_to_lrnd
+ 0001:246F       $i4_to_q
+ 0001:2416       $i4_to_qirnd
+ 0001:2416       $i4_to_qrnd
+ 0001:23B4       $i4_to_s
+ 0001:23B9       $i4_to_sirnd
+ 0001:23B9       $i4_to_srnd
+ 0001:23D0       $i4_to_w
+ 0001:23D5       $i4_to_wirnd
+ 0001:23D5       $i4_to_wrnd
+ 0001:234F       $i4_w
+ 0001:228C       $i8_4
+ 0002:0327       $i8_ac_hi
+ 0002:032F       $i8_ac_lo
+ 0001:2A36       $i8_add
+ 0001:3C7D       $i8_addf
+ 0001:3C81       $i8_addfsi
+ 0002:0666       $i8_arg
+ 0001:3CB9       $i8_clearac
+ 0001:26C5       $i8_cmp
+ 0001:30FA       $i8_cos
+ 0001:30E0       $i8_ctn
+ 0001:2CA0       $i8_div
+ 0001:3C9B       $i8_divf
+ 0001:3C9F       $i8_divfsi
+ 0001:3CAF       $i8_divr
+ 0001:3CB3       $i8_divrdi
+ 0001:2C9E       $i8_divrev
+ 0001:2188       $i8_errdiv0
+ 0001:217E       $i8_errinf
+ 0001:2192       $i8_errinvld
+ 0001:217E       $i8_errminf
+ 0001:217E       $i8_errpinf
+ 0001:219C       $i8_errstack
+ 0001:3D6F       $i8_even
+ 0001:2535       $i8_fix
+ 0001:24EB       $i8_fixirnd
+ 0001:24EB       $i8_fixrnd
+ 0002:064E       $i8_half
+ 0002:06D3       $i8_implicit_exp
+ 0001:4240       $i8_input
+ 0002:06D2       $i8_input_ws
+ 0001:2395       $i8_l
+ 0001:3CC9       $i8_movac
+ 0001:3CD2       $i8_movac_arg
+ 0001:3CE6       $i8_movarg
+ 0001:3CE2       $i8_movarg_ac
+ 0001:3CF1       $i8_movtemp
+ 0001:2C3D       $i8_mul
+ 0001:3C91       $i8_mulf
+ 0001:3C95       $i8_mulfsi
+ 0001:2B69       $i8_norm
+ 0002:0656       $i8_one
+ 0001:4086       $i8_output
+ 0001:3D2A       $i8_poly
+ 0001:3D18       $i8_popac
+ 0001:3D13       $i8_poparg
+ 0001:3D1C       $i8_popsi
+ 0001:3D01       $i8_pshac
+ 0001:3CFC       $i8_psharg
+ 0001:3D05       $i8_pshsi
+ 0002:0686       $i8_pzz
+ 0001:3DA5       $i8_p_q
+ 0001:2381       $i8_q
+ 0001:3DF5       $i8_reduce
+ 0002:0302       $i8_result
+ 0001:2BBF       $i8_round
+ 0002:0325       $i8_round_exp
+ 0002:0324       $i8_round_flag
+ 0001:2389       $i8_s
+ 0001:3113       $i8_sin
+ 0001:2A13       $i8_sub
+ 0001:3C87       $i8_subf
+ 0001:3C8B       $i8_subfsi
+ 0001:3CA5       $i8_subr
+ 0001:3CA9       $i8_subrdi
+ 0001:2A11       $i8_subrev
+ 0001:30B4       $i8_tan
+ 0002:066E       $i8_temp
+ 0001:4507       $i8_tmul
+ 0001:23F6       $i8_to_l
+ 0001:23EC       $i8_to_lirnd
+ 0001:23EC       $i8_to_lrnd
+ 0001:243A       $i8_to_q
+ 0001:241B       $i8_to_qirnd
+ 0001:241B       $i8_to_qrnd
+ 0001:23BE       $i8_to_s
+ 0001:23C3       $i8_to_sirnd
+ 0001:23C3       $i8_to_srnd
+ 0001:23DA       $i8_to_w
+ 0001:23DF       $i8_to_wirnd
+ 0001:23DF       $i8_to_wrnd
+ 0001:466D       $i8_tpwr10
+ 0002:065E       $i8_two
+ 0001:237F       $i8_w
+ 0002:0676       $i8_z
+ 0001:3DDB       $i8_z2p_q
+ 0001:3DEC       $i8_z3p_q
+ 0002:067E       $i8_zz
+ 0001:121B       B$FCMP
+ 0001:0E28       B$FIL2
+ 0001:0E29       B$FILD
+ 0001:0FA7       B$FIS2
+ 0001:0FAF       B$FIST
+ 0001:0FB7       B$FUST
+ 0000:0000  Imp  BEGINPAINT           (USER.39)
+ 0001:0720       chkstk
+ 0000:0000  Imp  CREATEWINDOW         (USER.41)
+ 0000:0000  Imp  DEFWINDOWPROC        (USER.107)
+ 0000:0000  Imp  DESTROYWINDOW        (USER.53)
+ 0000:0000  Imp  DISPATCHMESSAGE      (USER.114)
+ 0000:0000  Imp  ENDPAINT             (USER.40)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:0000  Imp  GETCLIENTRECT        (USER.33)
+ 0000:0000  Imp  GETDC                (USER.66)
+ 0000:0000  Imp  GETMESSAGE           (USER.108)
+ 0000:0000  Imp  GETSTOCKOBJECT       (GDI.87)
+ 0000:0000  Imp  GETTEXTMETRICS       (GDI.93)
+ 0000:0000  Imp  GLOBALALLOC          (KERNEL.15)
+ 0000:0000  Imp  GLOBALFREE           (KERNEL.17)
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  INVALIDATERECT       (USER.125)
+ 0000:0000  Imp  KILLTIMER            (USER.12)
+ 0000:0000  Imp  LOADCURSOR           (USER.173)
+ 0000:0000  Imp  LOADICON             (USER.174)
+ 0000:0000  Imp  LOCALALLOC           (KERNEL.5)
+ 0000:0000  Imp  LOCALFREE            (KERNEL.7)
+ 0000:0000  Imp  LOCALREALLOC         (KERNEL.6)
+ 0000:0000  Imp  MESSAGEBOX           (USER.1)
+ 0002:00C0       OpTab
+ 0000:0008  Abs  pAtomTable
+ 0000:0006  Abs  PLOCALHEAP
+ 0000:0000  Imp  POSTQUITMESSAGE      (USER.6)
+ 0000:000E  Abs  pStackBot
+ 0000:000C  Abs  pStackMin
+ 0000:000A  Abs  pStackTop
+ 0000:0000  Imp  REGISTERCLASS        (USER.57)
+ 0000:0000  Imp  RELEASEDC            (USER.68)
+ 0002:0004       rsrvptrs
+ 0000:0000  Imp  SELECTOBJECT         (GDI.45)
+ 0000:0000  Imp  SETTIMER             (USER.10)
+ 0000:0000  Imp  SHOWWINDOW           (USER.42)
+ 0002:0060       STKHQQ
+ 0000:0000  Imp  TEXTOUT              (GDI.33)
+ 0000:0000  Imp  TRANSLATEMESSAGE     (USER.113)
+ 0000:0000  Imp  UPDATEWINDOW         (USER.124)
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0001:0606       WINMAIN
+ 0001:04BF       WNDPROC
+ 0001:38CC       _atof
+ 0001:38C8       _atol
+ 0001:0720       _chkstk
+ 0001:1303       _cos
+ 0002:0134       _daylight
+ 0001:00E5       _draw_circle
+ 0001:02FB       _draw_clock
+ 0001:021C       _draw_hand
+ 0001:00B2       _draw_point
+ 0001:008D       _draw_text
+ 0002:08A0       _edata
+ 0000:0000  Abs  _end
+ 0002:00AE       _environ
+ 0002:0087       _errno
+ 0001:0940       _exit
+ 0001:4186       _fflush
+ 0001:3E66       _flushall
+ 0001:07DD       _free
+ 0001:398C       _getenv
+ 0001:1D34       _gmtime
+ 0002:0644       _HUGE
+ 0001:39EA       _isatty
+ 0001:0C5A       _localtime
+ 0001:36CC       _lseek
+ 0001:07D0       _malloc
+ 0001:3C6E       _matherr
+ 0001:3A0E       _memmove
+ 0001:3A56       _memset
+ 0001:07EA       _realloc
+ 0001:12FA       _sin
+ 0001:0C04       _sprintf
+ 0001:3E98       _stackavail
+ 0001:386E       _strcpy
+ 0001:0BE8       _strlen
+ 0001:3EAA       _strncmp
+ 0001:38A0       _strncpy
+ 0001:130C       _tan
+ 0001:0CC2       _time
+ 0002:0130       _timezone
+ 0001:0060       _txt_draw
+ 0001:0010       _txt_init
+ 0001:004A       _txt_setpos
+ 0001:0027       _txt_setrect
+ 0002:0136       _tzname
+ 0001:1EEE       _tzset
+ 0001:3982       _ultoa
+ 0001:3746       _write
+ 0002:006E       __acfinfo
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused
+ 0000:9876  Abs  __acrtused2
+ 0002:03CC       __adbgmsg
+ 0002:007B       __aintdiv
+ 0002:006C       __amblksiz
+ 0001:0746       __amsg_exit
+ 0001:3A94       __aNldiv
+ 0001:3B30       __aNlmul
+ 0001:3B64       __aNlrem
+ 0001:3C06       __aNNalrem
+ 0001:3B30       __aNulmul
+ 0002:0110       __asizeC
+ 0002:0111       __asizeD
+ 0001:0754       __astart
+ 0001:073D       __astkovr
+ 0002:0CF0       __buferr
+ 0002:0AF0       __bufin
+ 0002:08F0       __bufout
+ 0001:3EE4       __catox
+ 0001:35CE       __cfltcvt
+ 0002:0102       __cfltcvt_tab
+ 0002:03CE       __cflush
+ 0001:32B2       __cftoe
+ 0001:3400       __cftof
+ 0001:351C       __cftog
+ 0002:00B6       __child
+ 0001:0720       __chkstk
+ 0001:087C       __cinit
+ 0001:0740       __cintDIV
+ 0001:3F38       __cltoasub
+ 0001:31EA       __cropzeros
+ 0001:099C       __ctermsub
+ 0001:2FEA       __ctrandisp1
+ 0001:2FD2       __ctrandisp2
+ 0002:04EA       __ctype
+ 0002:04EA       __ctype_
+ 0001:3F44       __cxtoa
+ 0002:0606       __days
+ 0001:12E2       __dcvt
+ 0001:224D       __dcvtdisi
+ 0001:223E       __dcvtst0
+ 0001:224A       __dcvtst0a
+ 0001:2226       __dmovtmpesbx
+ 0001:2228       __dmovtmpessi
+ 0002:0092       __doserrno
+ 0001:3E12       __dosret0
+ 0001:3E25       __dosretax
+ 0001:3E1A       __dosreturn
+ 0002:008F       __dosvermajor
+ 0002:0090       __dosverminor
+ 0001:2068       __dtoxtime
+ 0001:11D7       __eaddd
+ 0001:1118       __eadds
+ 0001:11A7       __edivd
+ 0001:11BF       __edivdr
+ 0001:10E8       __edivs
+ 0001:1100       __edivsr
+ 0001:0D7F       __eldd
+ 0001:0E0C       __eldl
+ 0001:0D33       __elds
+ 0001:0E19       __eldw
+ 0001:118F       __emuld
+ 0001:10D0       __emuls
+ 0001:0F28       __estd
+ 0001:0F40       __estdp
+ 0001:0EDA       __ests
+ 0001:0EF2       __estsp
+ 0001:115F       __esubd
+ 0001:1177       __esubdr
+ 0001:10A0       __esubs
+ 0001:10B8       __esubsr
+ 0001:0957       __exit
+ 0001:1051       __fabs
+ 0002:007F       __fac
+ 0001:1216       __fadd
+ 0001:11DE       __faddd
+ 0001:111F       __fadds
+ 0001:325E       __fassign
+ 0001:1060       __fchs
+ 0001:1220       __fcmp
+ 0001:121B       __fcompp
+ 0002:017E       __fcsp
+ 0002:0184       __fctmp
+ 0002:02EE       __fctopst
+ 0001:120C       __fdiv
+ 0001:11AE       __fdivd
+ 0001:11C6       __fdivdr
+ 0001:1211       __fdivr
+ 0001:10EF       __fdivs
+ 0001:1107       __fdivsr
+ 0001:0E7D       __fdup
+ 0001:086C       __ffree
+ 0001:3640       __FF_MSGBANNER
+ 0001:0D9F       __fldd
+ 0001:0E1F       __fldl
+ 0001:0D51       __flds
+ 0001:0DD4       __fldt
+ 0001:0E26       __fldw
+ 0001:0EAC       __fldz
+ 0001:1316       __flsbuf
+ 0001:3FBE       __fltin
+ 0001:3F97       __fltinf
+ 0001:3C28       __fltout
+ 0000:9876  Abs  __fltused
+ 0001:0840       __fmalloc
+ 0001:1207       __fmul
+ 0001:1196       __fmuld
+ 0001:10D7       __fmuls
+ 0001:3194       __forcdecpt
+ 0002:0708       __fpinit
+ 0001:21E2       __fpmath
+ 0002:0180       __fpsigadr
+ 0001:21AF       __fpsignal
+ 0000:9876  Abs  __fptaskdata
+ 0001:390C       __fptostr
+ 0001:0743       __fptrap
+ 0001:0F24       __fstd
+ 0001:0F3C       __fstdp
+ 0001:0ED6       __fsts
+ 0001:0EEE       __fstsp
+ 0001:0F6D       __fstt
+ 0001:0F84       __fsttp
+ 0001:11FD       __fsub
+ 0001:1166       __fsubd
+ 0001:117E       __fsubdr
+ 0001:1202       __fsubr
+ 0001:10A7       __fsubs
+ 0001:10BF       __fsubsr
+ 0001:0FED       __ftol
+ 0001:1024       __ftst
+ 0001:12BC       __fxch
+ 0001:12AE       __fxchq
+ 0001:3660       __getbuf
+ 0002:00B9       __intno
+ 0002:03D0       __iob
+ 0002:0470       __iob2
+ 0001:1F9E       __isindst
+ 0002:04E8       __lastiob
+ 0002:05EC       __lpdays
+ 0001:3E32       __maperror
+ 0002:064C       __matherr_flag
+ 0001:07B6       __myalloc
+ 0002:0094       __nfile
+ 0001:0831       __nfree
+ 0001:080C       __nmalloc
+ 0001:074F       __NMSG_TEXT
+ 0001:074F       __NMSG_WRITE
+ 0001:07CE       __nullcheck
+ 0002:0092       __oserr
+ 0002:0096       __osfile
+ 0002:008F       __osmajor
+ 0002:0090       __osminor
+ 0002:0091       __osmode
+ 0002:008F       __osversion
+ 0001:146C       __output
+ 0002:00B8       __ovlflag
+ 0002:00BA       __ovlvec
+ 0002:00B0       __pgmptr
+ 0001:3240       __positive
+ 0002:008D       __psp
+ 0002:008B       __pspadr
+ 0001:11CF       __saddd
+ 0001:1110       __sadds
+ 0001:119F       __sdivd
+ 0001:11B7       __sdivdr
+ 0001:10E0       __sdivs
+ 0001:10F8       __sdivsr
+ 0001:09EC       __setargv
+ 0001:0B7A       __setenvp
+ 0002:010E       __sigintoff
+ 0002:010C       __sigintseg
+ 0001:0D7B       __sldd
+ 0001:0E08       __sldl
+ 0001:0D2F       __slds
+ 0001:0DCE       __sldt
+ 0001:0E15       __sldw
+ 0001:2210       __smovtmpesbx
+ 0001:2212       __smovtmpessi
+ 0001:1187       __smuld
+ 0001:10C8       __smuls
+ 0001:0F20       __sstd
+ 0001:0F38       __sstdp
+ 0001:0ED2       __ssts
+ 0001:0EEA       __sstsp
+ 0001:0F69       __sstt
+ 0001:0F80       __ssttp
+ 0001:1157       __ssubd
+ 0001:116F       __ssubdr
+ 0001:1098       __ssubs
+ 0001:10B0       __ssubsr
+ 0002:0089       __umaskval
+ 0001:3A84       __wrt2err
+ 0002:00AA       ___argc
+ 0002:00AC       ___argv
+ 0002:013A       ___dnames
+ 0002:0150       ___mnames
+ 0001:1EDE       ___tzset
+
+  Address         Publics by Value
+
+ 0000:0000  Imp  LOADICON             (USER.174)
+ 0000:0000  Imp  GETMESSAGE           (USER.108)
+ 0000:0000  Imp  WAITEVENT            (KERNEL.30)
+ 0000:0000  Imp  TRANSLATEMESSAGE     (USER.113)
+ 0000:0000  Imp  INITTASK             (KERNEL.91)
+ 0000:0000  Imp  DISPATCHMESSAGE      (USER.114)
+ 0000:0000  Imp  GETTEXTMETRICS       (GDI.93)
+ 0000:0000  Imp  LOCALALLOC           (KERNEL.5)
+ 0000:0000  Imp  GETSTOCKOBJECT       (GDI.87)
+ 0000:0000  Imp  BEGINPAINT           (USER.39)
+ 0000:0000  Imp  INVALIDATERECT       (USER.125)
+ 0000:0000  Imp  REGISTERCLASS        (USER.57)
+ 0000:0000  Imp  CREATEWINDOW         (USER.41)
+ 0000:0000  Imp  GLOBALFREE           (KERNEL.17)
+ 0000:0000  Imp  TEXTOUT              (GDI.33)
+ 0000:0000  Imp  GETCLIENTRECT        (USER.33)
+ 0000:0000  Imp  UPDATEWINDOW         (USER.124)
+ 0000:0000  Imp  FATALEXIT            (KERNEL.1)
+ 0000:0000  Imp  LOCALREALLOC         (KERNEL.6)
+ 0000:0000  Imp  SHOWWINDOW           (USER.42)
+ 0000:0000  Imp  INITAPP              (USER.5)
+ 0000:0000  Imp  MESSAGEBOX           (USER.1)
+ 0000:0000  Imp  KILLTIMER            (USER.12)
+ 0000:0000  Imp  LOADCURSOR           (USER.173)
+ 0000:0000  Imp  SETTIMER             (USER.10)
+ 0000:0000  Imp  LOCALFREE            (KERNEL.7)
+ 0000:0000  Imp  ENDPAINT             (USER.40)
+ 0000:0000  Imp  DESTROYWINDOW        (USER.53)
+ 0000:0000  Imp  DEFWINDOWPROC        (USER.107)
+ 0000:0000  Imp  POSTQUITMESSAGE      (USER.6)
+ 0000:0000  Abs  _end
+ 0000:0000  Imp  SELECTOBJECT         (GDI.45)
+ 0000:0000  Imp  GETDC                (USER.66)
+ 0000:0000  Imp  RELEASEDC            (USER.68)
+ 0000:0000  Imp  GLOBALALLOC          (KERNEL.15)
+ 0000:0006  Abs  PLOCALHEAP
+ 0000:0008  Abs  pAtomTable
+ 0000:000A  Abs  pStackTop
+ 0000:000C  Abs  pStackMin
+ 0000:000E  Abs  pStackBot
+ 0000:9876  Abs  __acrtused
+ 0000:9876  Abs  __acrtmsg
+ 0000:9876  Abs  __acrtused2
+ 0000:9876  Abs  __fptaskdata
+ 0000:9876  Abs  __fltused
+ 0001:0010       _txt_init
+ 0001:0027       _txt_setrect
+ 0001:004A       _txt_setpos
+ 0001:0060       _txt_draw
+ 0001:008D       _draw_text
+ 0001:00B2       _draw_point
+ 0001:00E5       _draw_circle
+ 0001:021C       _draw_hand
+ 0001:02FB       _draw_clock
+ 0001:04BF       WNDPROC
+ 0001:0606       WINMAIN
+ 0001:0720       __chkstk
+ 0001:0720       chkstk
+ 0001:0720       _chkstk
+ 0001:073D       __astkovr
+ 0001:0740       __cintDIV
+ 0001:0743       __fptrap
+ 0001:0746       __amsg_exit
+ 0001:074F       __NMSG_TEXT
+ 0001:074F       __NMSG_WRITE
+ 0001:0754       __astart
+ 0001:07B6       __myalloc
+ 0001:07CE       __nullcheck
+ 0001:07D0       _malloc
+ 0001:07DD       _free
+ 0001:07EA       _realloc
+ 0001:080C       __nmalloc
+ 0001:0831       __nfree
+ 0001:0840       __fmalloc
+ 0001:086C       __ffree
+ 0001:087C       __cinit
+ 0001:0940       _exit
+ 0001:0957       __exit
+ 0001:099C       __ctermsub
+ 0001:09EC       __setargv
+ 0001:0B7A       __setenvp
+ 0001:0BE8       _strlen
+ 0001:0C04       _sprintf
+ 0001:0C5A       _localtime
+ 0001:0CC2       _time
+ 0001:0D2F       __slds
+ 0001:0D33       __elds
+ 0001:0D51       __flds
+ 0001:0D7B       __sldd
+ 0001:0D7F       __eldd
+ 0001:0D9F       __fldd
+ 0001:0DCE       __sldt
+ 0001:0DD4       __fldt
+ 0001:0E08       __sldl
+ 0001:0E0C       __eldl
+ 0001:0E15       __sldw
+ 0001:0E19       __eldw
+ 0001:0E1F       __fldl
+ 0001:0E26       __fldw
+ 0001:0E28       B$FIL2
+ 0001:0E29       B$FILD
+ 0001:0E7D       __fdup
+ 0001:0EAC       __fldz
+ 0001:0ED2       __ssts
+ 0001:0ED6       __fsts
+ 0001:0EDA       __ests
+ 0001:0EEA       __sstsp
+ 0001:0EEE       __fstsp
+ 0001:0EF2       __estsp
+ 0001:0F20       __sstd
+ 0001:0F24       __fstd
+ 0001:0F28       __estd
+ 0001:0F38       __sstdp
+ 0001:0F3C       __fstdp
+ 0001:0F40       __estdp
+ 0001:0F69       __sstt
+ 0001:0F6D       __fstt
+ 0001:0F80       __ssttp
+ 0001:0F84       __fsttp
+ 0001:0FA7       B$FIS2
+ 0001:0FAF       B$FIST
+ 0001:0FB7       B$FUST
+ 0001:0FED       __ftol
+ 0001:1024       __ftst
+ 0001:1051       __fabs
+ 0001:1060       __fchs
+ 0001:1098       __ssubs
+ 0001:10A0       __esubs
+ 0001:10A7       __fsubs
+ 0001:10B0       __ssubsr
+ 0001:10B8       __esubsr
+ 0001:10BF       __fsubsr
+ 0001:10C8       __smuls
+ 0001:10D0       __emuls
+ 0001:10D7       __fmuls
+ 0001:10E0       __sdivs
+ 0001:10E8       __edivs
+ 0001:10EF       __fdivs
+ 0001:10F8       __sdivsr
+ 0001:1100       __edivsr
+ 0001:1107       __fdivsr
+ 0001:1110       __sadds
+ 0001:1118       __eadds
+ 0001:111F       __fadds
+ 0001:1157       __ssubd
+ 0001:115F       __esubd
+ 0001:1166       __fsubd
+ 0001:116F       __ssubdr
+ 0001:1177       __esubdr
+ 0001:117E       __fsubdr
+ 0001:1187       __smuld
+ 0001:118F       __emuld
+ 0001:1196       __fmuld
+ 0001:119F       __sdivd
+ 0001:11A7       __edivd
+ 0001:11AE       __fdivd
+ 0001:11B7       __sdivdr
+ 0001:11BF       __edivdr
+ 0001:11C6       __fdivdr
+ 0001:11CF       __saddd
+ 0001:11D7       __eaddd
+ 0001:11DE       __faddd
+ 0001:11FD       __fsub
+ 0001:1202       __fsubr
+ 0001:1207       __fmul
+ 0001:120C       __fdiv
+ 0001:1211       __fdivr
+ 0001:1216       __fadd
+ 0001:121B       B$FCMP
+ 0001:121B       __fcompp
+ 0001:1220       __fcmp
+ 0001:12AE       __fxchq
+ 0001:12BC       __fxch
+ 0001:12E2       __dcvt
+ 0001:12FA       _sin
+ 0001:1303       _cos
+ 0001:130C       _tan
+ 0001:1316       __flsbuf
+ 0001:146C       __output
+ 0001:1D34       _gmtime
+ 0001:1EDE       ___tzset
+ 0001:1EEE       _tzset
+ 0001:1F9E       __isindst
+ 0001:2068       __dtoxtime
+ 0001:217E       $i4_errminf
+ 0001:217E       $i8_errminf
+ 0001:217E       $i4_errpinf
+ 0001:217E       $i8_errpinf
+ 0001:217E       $i8_errinf
+ 0001:217E       $i4_errinf
+ 0001:2188       $i4_errdiv0
+ 0001:2188       $i8_errdiv0
+ 0001:2192       $i4_errinvld
+ 0001:2192       $i8_errinvld
+ 0001:219C       $i8_errstack
+ 0001:21AF       __fpsignal
+ 0001:21E2       __fpmath
+ 0001:2210       __smovtmpesbx
+ 0001:2212       __smovtmpessi
+ 0001:2226       __dmovtmpesbx
+ 0001:2228       __dmovtmpessi
+ 0001:223E       __dcvtst0
+ 0001:224A       __dcvtst0a
+ 0001:224D       __dcvtdisi
+ 0001:228C       $i8_4
+ 0001:22CD       $i4_8
+ 0001:234F       $i4_w
+ 0001:2351       $i4_q
+ 0001:2359       $i4_s
+ 0001:2365       $i4_l
+ 0001:237F       $i8_w
+ 0001:2381       $i8_q
+ 0001:2389       $i8_s
+ 0001:2395       $i8_l
+ 0001:23B4       $i4_to_s
+ 0001:23B9       $i4_to_sirnd
+ 0001:23B9       $i4_to_srnd
+ 0001:23BE       $i8_to_s
+ 0001:23C3       $i8_to_srnd
+ 0001:23C3       $i8_to_sirnd
+ 0001:23D0       $i4_to_w
+ 0001:23D5       $i4_to_wirnd
+ 0001:23D5       $i4_to_wrnd
+ 0001:23DA       $i8_to_w
+ 0001:23DF       $i8_to_wirnd
+ 0001:23DF       $i8_to_wrnd
+ 0001:23E7       $i4_to_lirnd
+ 0001:23E7       $i4_to_lrnd
+ 0001:23EC       $i8_to_lrnd
+ 0001:23EC       $i8_to_lirnd
+ 0001:23F1       $i4_to_l
+ 0001:23F6       $i8_to_l
+ 0001:2416       $i4_to_qrnd
+ 0001:2416       $i4_to_qirnd
+ 0001:241B       $i8_to_qrnd
+ 0001:241B       $i8_to_qirnd
+ 0001:243A       $i8_to_q
+ 0001:246F       $i4_to_q
+ 0001:24EB       $i8_fixrnd
+ 0001:24EB       $i8_fixirnd
+ 0001:2511       $i4_fixrnd
+ 0001:2511       $i4_fixirnd
+ 0001:2535       $i8_fix
+ 0001:2545       $i4_fix
+ 0001:2672       $i4_cmp
+ 0001:26C5       $i8_cmp
+ 0001:2717       $i4_subrev
+ 0001:2719       $i4_sub
+ 0001:2721       $i4_add
+ 0001:27F3       $i4_norm
+ 0001:2821       $i4_round
+ 0001:2883       $i4_mul
+ 0001:2907       $i4_divrev
+ 0001:2909       $i4_div
+ 0001:2A11       $i8_subrev
+ 0001:2A13       $i8_sub
+ 0001:2A36       $i8_add
+ 0001:2B69       $i8_norm
+ 0001:2BBF       $i8_round
+ 0001:2C3D       $i8_mul
+ 0001:2C9E       $i8_divrev
+ 0001:2CA0       $i8_div
+ 0001:2FD2       __ctrandisp2
+ 0001:2FEA       __ctrandisp1
+ 0001:30B4       $i8_tan
+ 0001:30E0       $i8_ctn
+ 0001:30FA       $i8_cos
+ 0001:3113       $i8_sin
+ 0001:3194       __forcdecpt
+ 0001:31EA       __cropzeros
+ 0001:3240       __positive
+ 0001:325E       __fassign
+ 0001:32B2       __cftoe
+ 0001:3400       __cftof
+ 0001:351C       __cftog
+ 0001:35CE       __cfltcvt
+ 0001:3640       __FF_MSGBANNER
+ 0001:3660       __getbuf
+ 0001:36CC       _lseek
+ 0001:3746       _write
+ 0001:386E       _strcpy
+ 0001:38A0       _strncpy
+ 0001:38C8       _atol
+ 0001:38CC       _atof
+ 0001:390C       __fptostr
+ 0001:3982       _ultoa
+ 0001:398C       _getenv
+ 0001:39EA       _isatty
+ 0001:3A0E       _memmove
+ 0001:3A56       _memset
+ 0001:3A84       __wrt2err
+ 0001:3A94       __aNldiv
+ 0001:3B30       __aNlmul
+ 0001:3B30       __aNulmul
+ 0001:3B64       __aNlrem
+ 0001:3C06       __aNNalrem
+ 0001:3C28       __fltout
+ 0001:3C6E       _matherr
+ 0001:3C7D       $i8_addf
+ 0001:3C81       $i8_addfsi
+ 0001:3C87       $i8_subf
+ 0001:3C8B       $i8_subfsi
+ 0001:3C91       $i8_mulf
+ 0001:3C95       $i8_mulfsi
+ 0001:3C9B       $i8_divf
+ 0001:3C9F       $i8_divfsi
+ 0001:3CA5       $i8_subr
+ 0001:3CA9       $i8_subrdi
+ 0001:3CAF       $i8_divr
+ 0001:3CB3       $i8_divrdi
+ 0001:3CB9       $i8_clearac
+ 0001:3CC9       $i8_movac
+ 0001:3CD2       $i8_movac_arg
+ 0001:3CE2       $i8_movarg_ac
+ 0001:3CE6       $i8_movarg
+ 0001:3CF1       $i8_movtemp
+ 0001:3CFC       $i8_psharg
+ 0001:3D01       $i8_pshac
+ 0001:3D05       $i8_pshsi
+ 0001:3D13       $i8_poparg
+ 0001:3D18       $i8_popac
+ 0001:3D1C       $i8_popsi
+ 0001:3D2A       $i8_poly
+ 0001:3D6F       $i8_even
+ 0001:3DA5       $i8_p_q
+ 0001:3DDB       $i8_z2p_q
+ 0001:3DEC       $i8_z3p_q
+ 0001:3DF5       $i8_reduce
+ 0001:3E12       __dosret0
+ 0001:3E1A       __dosreturn
+ 0001:3E25       __dosretax
+ 0001:3E32       __maperror
+ 0001:3E66       _flushall
+ 0001:3E98       _stackavail
+ 0001:3EAA       _strncmp
+ 0001:3EE4       __catox
+ 0001:3F38       __cltoasub
+ 0001:3F44       __cxtoa
+ 0001:3F97       __fltinf
+ 0001:3FBE       __fltin
+ 0001:4086       $i8_output
+ 0001:4186       _fflush
+ 0001:4240       $i8_input
+ 0001:4507       $i8_tmul
+ 0001:466D       $i8_tpwr10
+ 0002:0004       rsrvptrs
+ 0002:0060       STKHQQ
+ 0002:006C       __amblksiz
+ 0002:006E       __acfinfo
+ 0002:007B       __aintdiv
+ 0002:007F       __fac
+ 0002:0087       _errno
+ 0002:0089       __umaskval
+ 0002:008B       __pspadr
+ 0002:008D       __psp
+ 0002:008F       __osversion
+ 0002:008F       __dosvermajor
+ 0002:008F       __osmajor
+ 0002:0090       __osminor
+ 0002:0090       __dosverminor
+ 0002:0091       __osmode
+ 0002:0092       __oserr
+ 0002:0092       __doserrno
+ 0002:0094       __nfile
+ 0002:0096       __osfile
+ 0002:00AA       ___argc
+ 0002:00AC       ___argv
+ 0002:00AE       _environ
+ 0002:00B0       __pgmptr
+ 0002:00B6       __child
+ 0002:00B8       __ovlflag
+ 0002:00B9       __intno
+ 0002:00BA       __ovlvec
+ 0002:00C0       OpTab
+ 0002:0102       __cfltcvt_tab
+ 0002:010C       __sigintseg
+ 0002:010E       __sigintoff
+ 0002:0110       __asizeC
+ 0002:0111       __asizeD
+ 0002:0130       _timezone
+ 0002:0134       _daylight
+ 0002:0136       _tzname
+ 0002:013A       ___dnames
+ 0002:0150       ___mnames
+ 0002:017E       __fcsp
+ 0002:0180       __fpsigadr
+ 0002:0184       __fctmp
+ 0002:02EE       __fctopst
+ 0002:0302       $i4_result
+ 0002:0302       $i8_result
+ 0002:030C       $i4_round_flag
+ 0002:030D       $i4_round_exp
+ 0002:030F       $i4_ac_hi
+ 0002:0313       $i4_ac_lo
+ 0002:0324       $i8_round_flag
+ 0002:0325       $i8_round_exp
+ 0002:0327       $i8_ac_hi
+ 0002:032F       $i8_ac_lo
+ 0002:03CC       __adbgmsg
+ 0002:03CE       __cflush
+ 0002:03D0       __iob
+ 0002:0470       __iob2
+ 0002:04E8       __lastiob
+ 0002:04EA       __ctype_
+ 0002:04EA       __ctype
+ 0002:05EC       __lpdays
+ 0002:0606       __days
+ 0002:0644       _HUGE
+ 0002:064C       __matherr_flag
+ 0002:064E       $i8_half
+ 0002:0656       $i8_one
+ 0002:065E       $i8_two
+ 0002:0666       $i8_arg
+ 0002:066E       $i8_temp
+ 0002:0676       $i8_z
+ 0002:067E       $i8_zz
+ 0002:0686       $i8_pzz
+ 0002:06D2       $i8_input_ws
+ 0002:06D3       $i8_implicit_exp
+ 0002:0708       __fpinit
+ 0002:08A0       _edata
+ 0002:08F0       __bufout
+ 0002:0AF0       __bufin
+ 0002:0CF0       __buferr
+
+Program entry point at 0001:0754

@@ -1,0 +1,46 @@
+## @file
+#  Aclock is an analog clock program for text mode console displays, terminals, or terminal emulators.
+#  This program is obviously absolutely useless, except for turning your old, expensive mainframe or
+#  supercomputer into a wall clock.
+#  
+#  Copyright (c) 1994-2016 Antoni Sawicki <as@tenoware.com>
+#  Copyright (c) 2016 Natalia Portillo <claunia@claunia.com>
+#  
+##
+
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = Aclock
+  FILE_GUID                      = 23825e7d-3da7-4201-836d-582d369b0986
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = IA32 X64 IPF EBC Etc...
+#
+
+[Sources]
+  Aclock.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+  StdLib/StdLib.dec
+
+[LibraryClasses]
+  LibC
+  LibMath
+  UefiBootServicesTableLib
+  UefiApplicationEntryPoint
+
+[Guids]
+
+[Ppis]
+
+[Protocols]
+
+[FeaturePcd]
+
+[Pcd]

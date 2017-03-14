@@ -1,0 +1,82 @@
+This is curses and termlib for VxWorks 4.0.2. (OS dependence is minimal, so
+it should work, or just about, with 5.0 too).
+
+Curses allows you to manage text windows nicely, including scrolling of
+arbitrary rectangular text regions, overlapping windows, etc. Termlib
+is used by curses to allow it to work with almost any cursor-addressible 
+terminal or terminal emulator. The version of curses that I started with
+(4.3 Tahoe) was full of nasty bugs, most of which should be fixed by now,
+but you may still be able to find some. 
+
+For the VxWorks version, I added semaphore locking to curses so that multiple 
+processes can use it.  The termlib routines have no locking, but you should 
+be OK because they are called by curses, which is locked. Both curses and 
+termlib use static variables (e.g. 'Def_term' variable and 'genbuf' buffer 
+for the current termcap entry in curses, 'tbuf' pointer in termlib), which
+you have to be careful about. This should not cause a problem unless you want 
+to have two totally independent displays or other fanciness. The bottom line 
+is: this works very well for me. However, it is useful to understand the
+historical kludge perpetrated by termlib to access the terminal capability
+currently in use by the application (e.g. for operations such as tgetstr()):
+The termcap entry is initialized by curses during the initscr() call, which
+uses tgetent() to get the termcap from termlib. The entry is held by curses 
+in a static character buffer ('genbuf'). The termlib routines keep their 
+own static character pointer, 'tbuf', which points at 'genbuf'. If you call
+tgetstr(), then termlib uses 'tbuf' to look through the termcap entry being 
+used by curses. As you can well imagine, this means there can be only one 
+"current" termcap. To stay out of trouble, call initscr() only once and
+from only one task, and avoid calling the tgetent() routine yourself.
+
+
+Usual disclaimer: This software is provided ``as is'' and without any express
+or implied warranties. My employer (ISTS) is in no way responsible for its 
+contents. Any bugs you encounter you will have to fix yourself.
+
+Caution: The curses.h include file defines the preprocessor macros OK and ERR.
+Unfortunately, VxWorks also defines OK, and does so differently. My solution
+has been to use VX_OK for VxWorks instead (see h/stdio.h), and let curses
+have OK. You may want to do things the other way around, so I also define
+CURSES_OK. Your code must then fix the OK macro after #including curses.h.
+
+Good luck. If you have any questions, improvements, bug fixes, etc. send
+them to georg@sgl.ists.ca.
+
+Georg Feil
+Space Geodynamics Laboratory
+ISTS, 2700 Steeles Ave West
+Concord, Ontario
+(416) 665-5458
+--------------------------------------------------------------------
+
+To install,
+
+1) Cd to the termlib directory, and edit the Makefile there. Set VWDIR to 
+   your local VxWorks root directory. Set other things such as the tools to
+   use (default is the GNU tools gcc, gld etc.)  
+
+2) If your VxWorks target system has a file system, copy the termcap file 
+   over to it, and set the appropriate pathname in termcap.c (DEF_FILE).
+   If there is no file system, add any necessary capability entries to
+   the termcaps[] array in termcap.c, combining multiple lines into one
+   as has been done with the existing entries. You may need to look in your
+   own system's termcap file (usually /etc/termcap) to find entries.
+
+3) Type 'make install' to build the termlib library, libtermlib.a. It will
+   be placed in the lib directory.
+
+4) Cd to the curses directory, and edit the Makefile as in step (1).
+
+5) Type 'make install' to build the curses library, libcurses.a. It will
+   be placed in the lib directory.
+
+6) Cd to the test directory and edit the Makefile. Set the TERMINAL type
+   as desired by editing twinkle.c, then type 'make' to build the
+   test program twinkle.
+
+7) Use 'ld </xxx/test/twinkle' from the VxWorks shell to load the test program,
+   and then 'twinkle' to run it. Twinkle draws various patterns of asterisks 
+   on the screen. You can use twinkle.c as a template for your curses programs.
+
+Note: The header directory ./h contains a few header files I like to use
+      that are not normally part of VxWorks.
+
