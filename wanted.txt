@@ -1,10 +1,6 @@
 Just compile
-    Minix3 ARM
-    OpenSolaris new CPUs
-    HaikuOS ARM
     Microport 286
     Coherent 286
-    Xenix 286
     Apple IIGS GNO https://en.wikipedia.org/wiki/GNO/ME
     Xv6 x86 ARM
     HPUX <= 8
@@ -34,6 +30,9 @@ No system available
     CX/UX Harris SysV running on NightHawk series m88k based machines
     SPARC VxWorks
     Consensys UNIX
+    OpenSolaris ARM/PPC
+    HaikuOS ARM
+    Linux on Intel i960
 
 On hold wating for Aclock 3.x
     CP/M != ZX Spectrum 3
@@ -50,4 +49,3 @@ Misc
     Emscripten
     More x64 OSes
     More arm64 aka aarch64
-    Linux on Intel i960
