@@ -6,7 +6,7 @@ Aclock is an analog clock program for text mode console displays, terminals, or 
 
 Aclock binaries have been compiled for nearly 250 computer system platforms. Most of them are [contributed](https://github.com/tenox7/aclock/blob/master/contrib.txt).
 
-Some aclock builds are available as a bootable disk image under [bootimages](https://github.com/tenox7/aclock/tree/master/bootimages)
+Some aclock builds are available as a bootable disk image under [bootimages](https://github.com/tenox7/aclock/tree/master/bootimages).
 
 For source code, available are Curses, Termcap and AAlib for more modern systems, ANSI and K&R style. Provided are also specific, non-unix ports. There is also a vector graphics version for Tektronix 4014/4010 or XTerm/Kermit Tek emulator. 
 
