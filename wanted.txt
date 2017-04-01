@@ -1,51 +1,62 @@
-Just compile
-    Microport 286
-    Coherent 286
-    Apple IIGS GNO https://en.wikipedia.org/wiki/GNO/ME
-    Xv6 x86 ARM
-    HPUX <= 8
-    Microsoft Nano Server
-    WinPE boot image
-    OpenRISC - Linux
-    RISC-V - Linux, FreeBSD, NetBSD
-    RiscOS ARM 26 bit
-
-Code Port Required
-    O3ONE
-    HelenOS 386 ARM MIPS SPARC etc
-    OS-9
-    Micronix
-    TROPIX
-    Consoles, Xbox, PS2/3/4, etc.
-
-
-No system available
-    AIX IA64 aka Project Monterey
-    NCR Tower Unix
-    PowerMAX UNIX
-    Idris
-    Windows NT SPARC, CLIX
-    Amdahl UTS
-    MINWIN
-    CX/UX Harris SysV running on NightHawk series m88k based machines
-    SPARC VxWorks
-    Consensys UNIX
-    OpenSolaris ARM/PPC
-    HaikuOS ARM
-    Linux on Intel i960
-
-On hold wating for Aclock 3.x
-    CP/M != ZX Spectrum 3
-    UZIX
-    UZI
-    z88dk
-    ccz80
-    Aztec C
-    MAME/MESS
-    Research Unix on SIMH
-
-Misc
-    More embedded/RTOS
-    Emscripten
-    More x64 OSes
-    More arm64 aka aarch64
+Microport 286
+Coherent 286
+Apple IIGS GNO https://en.wikipedia.org/wiki/GNO/ME
+Xv6 x86, ARM
+V7/x86 http://www.nordier.com/v7x86/
+HPUX <= 8
+Microsoft Nano Server
+WinPE boot image
+OpenRISC - Linux
+RISC-V - Linux, FreeBSD, NetBSD
+RiscOS ARM 26 bit
+BareMetal OS https://github.com/ReturnInfinity/BareMetal-OS
+Retro UNIX http://www.singlix.com/runix/index.html
+NewOS http://newos.org/
+O3ONE http://www.o3one.org/
+HelenOS 386 ARM MIPS SPARC etc
+OS-9
+NitrOS-9
+Inferno
+Amoeba
+Contiki
+MenuetOS - now C compiler available! http://www.menuetos.net/
+Visopsys http://visopsys.org/
+Micronix
+TROPIX
+Consoles, Xbox, PS2/3/4, etc.
+AIX IA64 aka Project Monterey
+NCR Tower Unix
+PowerMAX UNIX
+Idris
+Windows NT SPARC, CLIX
+Temple OS http://www.templeos.org/
+Amdahl UTS
+MINWIN
+CX/UX Harris SysV running on NightHawk series m88k based machines
+SPARC VxWorks
+eCos http://ecos.sourceware.org/
+RTEMS https://www.rtems.org/
+Consensys UNIX
+OpenSolaris ARM/PPC
+HaikuOS ARM
+Linux on Intel i960
+VSTa http://www.vsta.org/
+FMI/OS https://launchpad.net/fmios/
+CP/M != ZX Spectrum 3
+FUZIX https://github.com/EtchedPixels/FUZIX
+UZIX
+UZI
+z88dk
+ccz80
+Aztec C
+MAME/MESS OSes
+Research Unix on SIMH
+Emscripten
+More more more...
+https://en.wikipedia.org/wiki/List_of_operating_systems
+https://en.wikipedia.org/wiki/Comparison_of_operating_systems
+https://en.wikipedia.org/wiki/Comparison_of_open-source_operating_systems
+https://en.wikipedia.org/wiki/Category:Operating_systems
+https://en.wikipedia.org/wiki/Category:Real-time_operating_systems
+https://en.wikipedia.org/wiki/Comparison_of_real-time_operating_systems
+https://en.wikipedia.org/wiki/Category:Embedded_operating_systems
