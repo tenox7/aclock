@@ -1,0 +1,11 @@
+XL2
+H 1 areas 2 global symbols
+S .__.ABS. Def0000
+A _CODE size 18 flags 0 addr 0
+S _get_time Def0000
+T 00 00
+R 00 00 00 00
+T 00 00 E5 FD E1 0E 2C CD 05 00 FD 74 00 FD 75 01
+R 00 00 00 00
+T 0E 00 FD 72 02 FD 73 03 FD E5 E1 C9
+R 00 00 00 00
