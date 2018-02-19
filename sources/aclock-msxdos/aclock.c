@@ -33,26 +33,6 @@ void draw_text(int x,int y,char *str){
 	printf("\033Y%c%c%s", y+32, x+32, str);
 }
 
-char dots(int r){
-	switch (r) {
-		case 0:
-		case 5:
-		case 10:
-		case 15:
-		case 20:
-		case 25:
-		case 30:
-		case 35:
-		case 40:
-		case 45:
-		case 50:
-		case 55:
-			return 1;
-		default:
-			return 0;
-	}
-}
-
 void draw_hand(int len,char c,int x,int y,float ratio,float sin,float cos){
 	int xh, yh, h;
 
@@ -101,7 +81,7 @@ void main(void){
 	int max_x = LINLEN;		// total of columns in text mode
 	int max_y = CRTCNT;		// total of lines in text mode
 
-	int cen_x,cen_y,hand,r,smax,x,y;
+	int cen_x,cen_y,hand,i,j,smax,x,y;
 
 	if ( max_x > 64 )		// MSX2/2+/turbo R supports 80 columns
 		ratio = 2.0;		// text mode.
@@ -122,34 +102,39 @@ void main(void){
 	cen_x = max_x/2;
 	cen_y = max_y/2;
 
-	while(1){
-		cls();
+	j=-1;
 
+	while(1){
 		time = get_time(dummy);	// get current time using BDOS (CP/M)
 					// routines, if there isn't a clock chip
 					// the time will be allways 00:00:00
 
-		for(r=0; r<60; r++){
-			x = sin_t[r] * hand * ratio + cen_x;
-			y = cos_t[r] * hand + cen_y;
-			if (dots(r)==1) {
+		if (j != time[2]){
+			cls();
+
+			draw_text(cen_x-5, max_y/4, ".:ACLOCK:.");
+
+			sprintf(digital,"[%02d:%02d:%02d]",time[0],time[1],time[2]);
+
+			draw_text(cen_x-5, 4*max_y/5, digital);
+
+			for(i=0; i<60; i+=5) {
+				x = sin_t[i] * hand * ratio + cen_x;
+				y = cos_t[i] * hand + cen_y;
 				draw_point(x, y, 'o');
 			}
+
+			if (time[0]>11)
+				time[0]=5*(time[0]-12);
+			else
+				time[0]=5*time[0];
+
+			draw_hand(2*hand/3,'h',cen_x,cen_y,ratio,sin_t[time[0]],cos_t[time[0]]);
+			draw_hand(hand-2,'m',cen_x,cen_y,ratio,sin_t[time[1]],cos_t[time[1]]);
+			draw_hand(hand-1,'.',cen_x,cen_y,ratio,sin_t[time[2]],cos_t[time[2]]);
+
 		}
-
-		draw_text(cen_x-5, max_y/4, ".:ACLOCK:.");
-
-		sprintf(digital,"[%02d:%02d:%02d]",time[0],time[1],time[2]);
-		draw_text(cen_x-5, 4*max_y/5, digital);
-
-		if (time[0]>11)
-			time[0]=5*(time[0]-12);
-		else
-			time[0]=5*time[0];
-
-		draw_hand(2*hand/3,'h',cen_x,cen_y,ratio,sin_t[time[0]],cos_t[time[0]]);
-		draw_hand(hand-2,'m',cen_x,cen_y,ratio,sin_t[time[1]],cos_t[time[1]]);
-		draw_hand(hand-1,'.',cen_x,cen_y,ratio,sin_t[time[2]],cos_t[time[2]]);
+		j = time[2];
 	}
 }
 
