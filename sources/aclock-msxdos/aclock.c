@@ -13,8 +13,8 @@
  *
  * Download the SDCC backend for MSXDOS in:
  * http://msx.atlantes.org/index_en.html#sdccmsxdos
+ *
  */
-
 #include <stdio.h>
 
 #define LINLEN	(* (char *) 0xf3b0)
@@ -24,24 +24,22 @@
 
 static char * get_time(char *c);
 
+static char* csry = (char *) CSRY;
+static char* csrx = (char *) CSRX;
+
 void cls(void){
 	puts("\033E");
 }
 
-void locate(int x, int y){
-	char* csry = (char *) CSRY;
-	char* csrx = (char *) CSRX;
+void draw_point(int x,int y, char c){
 	*csry = (char)y+1;
 	*csrx = (char)x+1;
-}
-
-void draw_point(int x,int y, char c){
-	locate(x,y);
         printf("%c",c);
 }
 
 void draw_text(int x,int y,char *str){
-	locate(x,y);
+	*csry = (char)y+1;
+	*csrx = (char)x+1;
 	printf("%s",str);
 }
 
@@ -113,9 +111,9 @@ void main(void){
 	cen_x = max_x/2;
 	cen_y = max_y/2;
 
-	j=-1;				// to forces clock update
+	j=-1;				// yo forces clock update
 
-	puts("\033x5");			// disables cursor
+	puts("\033x5");			// disables cursor 
 
 	while(1){
 		time = get_time(dummy);	// get current time using BDOS (CP/M)
