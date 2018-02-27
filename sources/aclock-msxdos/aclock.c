@@ -17,8 +17,10 @@
 
 #include <stdio.h>
 
-#define  LINLEN	(* (char *) 0xf3b0)
-#define  CRTCNT (* (char *) 0xf3b1)
+#define LINLEN	(* (char *) 0xf3b0)
+#define CRTCNT (* (char *) 0xf3b1)
+#define CSRY 0xf3dc
+#define CSRX 0xf3dd
 
 static char * get_time(char *c);
 
@@ -26,12 +28,21 @@ void cls(void){
 	puts("\033E");
 }
 
-void draw_point(int x,int y,char c){
-	printf("\033Y%c%c%c", y+32, x+32, c);
+void locate(int x, int y){
+	char* csry = (char *) CSRY;
+	char* csrx = (char *) CSRX;
+	*csry = (char)y+1;
+	*csrx = (char)x+1;
+}
+
+void draw_point(int x,int y, char c){
+	locate(x,y);
+        printf("%c",c);
 }
 
 void draw_text(int x,int y,char *str){
-	printf("\033Y%c%c%s", y+32, x+32, str);
+	locate(x,y);
+	printf("%s",str);
 }
 
 void draw_hand(int len,char c,int x,int y,float ratio,float sin,float cos){
@@ -48,7 +59,7 @@ void main(void){
 
 	char digital[15];
 
-	static char dummy[]="HMSC";	// this is very ugly!
+	static char dummy[]="HMSC";
 	char *time;
 
 	float ratio;
@@ -79,16 +90,16 @@ void main(void){
 		-0.499997, -0.587783, -0.669128, -0.743143, -0.809015,
 		-0.866024, -0.913544, -0.951055, -0.978147, -0.994521 };
 
-	int max_x = LINLEN;		// number of columns in current text mode
-	int max_y = CRTCNT;		// number of lines in current text mode
+	int max_x = LINLEN;		// total of columns in text mode
+	int max_y = CRTCNT;		// total of lines in text mode
 
 	int cen_x,cen_y,hand,i,j,smax,x,y;
 
 	if ( max_x > 64 )		// MSX2/2+/turbo R supports 80 columns
 		ratio = 2.0;		// text mode.
 	else {
-		if ( max_x > 48 )	// MSX2+/turbo R can operates in KANJI
-			ratio = 1.5;	// mode and using 64 columns text mode
+		if ( max_x > 40 )	// MSX2+/turbo R can operates in a 64
+			ratio = 1.5;	// columns KANJI mode.
 		else
 			ratio = 1.0;	// for 40/32 columns text mode.
 	}
@@ -99,11 +110,12 @@ void main(void){
 		smax=max_y;
 
 	hand = (smax/2)-1;
-
 	cen_x = max_x/2;
 	cen_y = max_y/2;
 
-	j=-1;
+	j=-1;				// to forces clock update
+
+	puts("\033x5");			// disables cursor
 
 	while(1){
 		time = get_time(dummy);	// get current time using BDOS (CP/M)
@@ -139,7 +151,7 @@ void main(void){
 					sin_t[time[2]],cos_t[time[2]]);
 
 		}
-		j = time[2];
+		j = time[2];		// holds the actual second value
 	}
 }
 
