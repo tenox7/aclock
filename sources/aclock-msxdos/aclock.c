@@ -25,20 +25,17 @@ static char * get_time(char *c);
 static char* csry = (char *) CSRY;
 static char* csrx = (char *) CSRX;
 
-void cls(void){
-	puts("\033E");
-}
+static float ratio;
 
-void locate(int x, int y){
-	char* csry = (char *) CSRY;
-	char* csrx = (char *) CSRX;
+void draw_point(int x,int y, char c){
 	*csry = (char)y+1;
 	*csrx = (char)x+1;
         printf("%c",c);
 }
 
 void draw_text(int x,int y,char *str){
-	locate(x, y);
+	*csry = (char)y+1;
+	*csrx = (char)x+1;
 	printf("%s",str);
 }
 
@@ -80,6 +77,9 @@ void main(void){
 		-0.407, -0.500, -0.588, -0.669, -0.743, -0.809, -0.866, -0.914,
 		-0.951, -0.978, -0.995 };
 
+	csry = (char *) CSRY;
+	csrx = (char *) CSRX;
+
 	if ( max_x > 64 )
 		// MSX2/2+/turbo R supports 80 columns text mode.
 		ratio = 2.0;
@@ -112,7 +112,8 @@ void main(void){
 		time = get_time(dummy);
 
 		if (j != time[2]){
-			cls();
+
+			puts("\033E");	// clear screen
 
 			draw_text(cen_x-5, max_y/4, ".:ACLOCK:.");
 
