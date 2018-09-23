@@ -22,15 +22,15 @@
 
 static char * get_time(char *c);
 
-static char* csry = (char *) CSRY;
-static char* csrx = (char *) CSRX;
+static char* csry;
+static char* csrx;
 
 static float ratio;
 
 void draw_point(int x,int y, char c){
 	*csry = (char)y+1;
 	*csrx = (char)x+1;
-        printf("%c",c);
+	printf("%c",c);
 }
 
 void draw_text(int x,int y,char *str){
@@ -104,7 +104,8 @@ void main(void){
 	// to forces the first clock update
 	j=-1;
 
-	puts("\033x5");			// disables cursor
+	// don't prints cursor
+	puts("\033x5");
 
 	while(1){
 		// get current time using BDOS (CP/M) routines, if there isn't
