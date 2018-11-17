@@ -30,13 +30,13 @@ static float ratio;
 void draw_point(int x,int y, char c){
 	*csry = (char)y+1;
 	*csrx = (char)x+1;
-	printf("%c",c);
+	putchar(c);
 }
 
 void draw_text(int x,int y,char *str){
 	*csry = (char)y+1;
 	*csrx = (char)x+1;
-	printf("%s",str);
+	puts(str);
 }
 
 void draw_hand(int len,char c,int x,int y, float sin, float cos){
