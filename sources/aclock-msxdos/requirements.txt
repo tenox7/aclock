@@ -8,6 +8,6 @@ keyring==10.4.0
 keyrings.alt==2.2
 pycrypto==2.6.1
 pygobject==3.24.1
-pyxdg==0.25
+pyxdg==0.26
 SecretStorage==2.3.1
 six==1.10.0
