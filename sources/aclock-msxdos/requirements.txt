@@ -1,13 +1,1 @@
-asn1crypto==0.22.0
-bincopy==10.0.0
-cryptography==2.3
-enum34==1.1.6
-idna==2.5
-ipaddress==1.0.17
-keyring==10.4.0
-keyrings.alt==2.2
-pycrypto==2.6.1
-pygobject==3.24.1
-pyxdg==0.26
-SecretStorage==2.3.1
-six==1.10.0
+bincopy==16.3.0
