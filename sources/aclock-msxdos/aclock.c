@@ -168,7 +168,7 @@ void main(void){
 				draw_point(analog[i].x, analog[i].y, analog[i].c);
 			}
 
-      // this is a 12 hour clock
+			// this is a 12 hour clock
 			if (time[0] > 11)
 				time[0] = 5 * (time[0] - 12);
 			else
