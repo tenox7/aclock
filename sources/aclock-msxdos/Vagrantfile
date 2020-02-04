@@ -11,7 +11,9 @@ Vagrant.configure("2") do |config|
     rm -rf /tmp/msx
     git clone https://gist.github.com/35e406ed26cea6bae20c.git /tmp/msx
     cd /vagrant
+    mkdir /vagrant/msx
     bash /tmp/msx/sdcc_configure_msx_support ./msx
     make superclean && make   
+    exit 0
   SHELL
 end
