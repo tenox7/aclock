@@ -17,7 +17,7 @@ Contributions to the binary collection. In order of appearance:
 - AT&T 3B2 - Stephen Jones
 - Altos:Xenix - Ken Guenther
 - SGI MIPS:IRIX4+5, Apple A/UX2, SH:NerBSD, AXP:NetBSD5, ARMEL:NetBSD5, i386:Interix - Oliver Reissig
-- Amiga:Workbench, PPC:MorphOS, ARM:iOS-APP, EFI Firmare, ARM:Linux, ARM:FreeBSD, PPC:Linux, PPC:FreeBSD, i386:SingularityOS, ARM:Minix3 - Natalia Portillo aka claunia
+- Amiga:Workbench, PPC:MorphOS, ARM:iOS-APP, EFI Firmare, ARM:Linux, ARM:FreeBSD, PPC:Linux, PPC:FreeBSD, i386:SingularityOS, ARM:Minix3, ALL:EFI - Natalia Portillo aka claunia
 - Sony NEWS:NEWS-OS - Dennis Grevenstein
 - MIPS-Magnum:NetBSD, Amiga Boot Disk, Sharp X68000:Human68k OS Cisco:IOS - Jason Stevens aka neozeed
 - Amiga M68K:Unix - Andrew Whitlock aka faillure
