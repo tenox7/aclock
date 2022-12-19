@@ -1,10 +1,8 @@
 Microport 286
 Coherent 286
-Apple IIGS GNO https://en.wikipedia.org/wiki/GNO/ME
 Xv6 x86, ARM
 V7/x86 http://www.nordier.com/v7x86/
 HPUX <= 8
-Microsoft Nano Server
 WinPE boot image
 OpenRISC - Linux
 RISC-V - Linux, FreeBSD, NetBSD
@@ -24,7 +22,6 @@ Visopsys http://visopsys.org/
 Micronix
 TROPIX
 Consoles, Xbox, PS2/3/4, etc.
-AIX IA64 aka Project Monterey
 NCR Tower Unix
 PowerMAX UNIX
 Idris
@@ -37,7 +34,7 @@ SPARC VxWorks
 eCos http://ecos.sourceware.org/
 RTEMS https://www.rtems.org/
 Consensys UNIX
-OpenSolaris ARM/PPC
+OpenSolaris (NEW) ARM/PPC
 HaikuOS ARM
 Linux on Intel i960
 VSTa http://www.vsta.org/
