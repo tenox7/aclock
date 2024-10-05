@@ -222,7 +222,7 @@ main(){
         ltime=localtime(&t);
         cls();
         draw_circle();
-        draw_hour((((ltime->tm_hour>12) ? ltime->tm_hour-12 : ltime->tm_hour)*5)+(ltime->tm_min/10)); 
+        draw_hour((((ltime->tm_hour>=12) ? ltime->tm_hour-12 : ltime->tm_hour)*5)+(ltime->tm_min/10)); 
         draw_minute(ltime->tm_min);
         draw_seconds(ltime->tm_sec);
         draw_text(35, 6, ".:ACLOCK:.");
