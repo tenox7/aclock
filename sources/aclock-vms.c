@@ -13,6 +13,7 @@
 #include <string.h>
 #include <math.h>
 #include <time.h>
+#include <unistd.h>
 #include <descrip.h>
 #include <smgdef.h>
 #include <smg$routines.h>
@@ -25,8 +26,6 @@ static unsigned long pb_id = 0;
 static unsigned long disp_id = 0;
 static unsigned long kb_id = 0;
 static unsigned long rows, cols;
-static float one_sec = 1.0;
-static unsigned long flt_type = 4;  /* LIB$K_IEEE_S */
 
 static void cleanup(void) {
     if (disp_id) smg$delete_virtual_display(&disp_id);
@@ -145,7 +144,7 @@ int main(int argc, char **argv) {
 
         smg$repaint_screen(&pb_id);
 
-        lib$wait(&one_sec, 0, &flt_type);
+        sleep(1);
     }
 
     cleanup();
